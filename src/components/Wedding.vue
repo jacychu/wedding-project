@@ -68,6 +68,7 @@
       <p class="mb-6 text-xl md:text-4xl">RSVP</p>
       <p class="mb-6 text-xl md:text-xl text-gray-400">Attend the wedding</p>
       <form @submit.prevent="collectData">
+      <!--<form action="https://script.google.com/macros/s/AKfycbwO3n5eXHSr_gBo17DSAfW5mtThfnoRYsMGhkHtnQmhn4gaJCAWTov3_2vas05TVhLzKQ/exec" method="get">-->
         <div class="flex items-center mb-5">
           <label for="name" class="inline-block w-20 mr-6 text-right
                                   font-bold text-gray-600">*Name</label>
@@ -119,7 +120,7 @@
   </div>
 </template>
 
-<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
 <script>
 import axios from 'axios'
 
@@ -136,7 +137,7 @@ export default {
     collectData() {
       // $.ajax({
       //   type: "get",
-      //   url: "https://script.google.com/macros/s/AKfycbxhjoytD4VBdvJUbMD8gaopxueGBNJy7bqj4b9nuiOxgsDIuf7Vb8LQtms4fgAWHGd1/exec",
+      //   url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycby0TBR-1gEfdvp1Xmo_wNbRP3wRW_qad7J1Pr6QxzMh2bwckcFDfbjAIogWh8gFziVr-w/exec",
       //   data: {
       //       "name": this.name,
       //       "phone": this.phone,
@@ -151,8 +152,9 @@ export default {
       //     }
       //   },
       // });
-      axios.defaults.crossDomain = true;
-      axios.post('https://cors-anywhere.herokuapp.com/https://script.googleusercontent.com/macros/echo?user_content_key=7WNOUzIvVZoBzuJC3iyKfEgBFmzc0wAuOx7ByfxxqfKnNLp_bBFlkb1wiWIvm4NKz3mp9vehBd0CcoHOAk_b4sdgSjxMjSZOm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnBYkq3ljI1jjl3RxplWMnAVVdFl1y35spNL43WZ7nHMLZhuCvGLJYqWnNxKZt1v4mdLN-CoQIgQd2nI1UH8yoDfrX0SqMYoZpw&lib=M8i3Mf2VYn2UHp_6H9gOtUdNSyhx4ziTX', {
+      //axios.defaults.crossDomain = true;
+      axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+      axios.post('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwO3n5eXHSr_gBo17DSAfW5mtThfnoRYsMGhkHtnQmhn4gaJCAWTov3_2vas05TVhLzKQ/exec', {
         name: this.name,
         phone: this.phone,
         email: this.email,
