@@ -7,10 +7,6 @@
     </div>
     <header class="bg-header flex items-center justify-center h-screen">
       <div class="mx-4 p-4 text-center md:p-8 text-white pb-12">
-      <!-- <div class="bg-white font-serif mx-4 p-4 text-center md:p-8"> -->
-        <!-- <p class="italic text-sm">
-          November 1, 2019
-        </p> -->
         <h1 class="text-6xl md:text-9xl mb-3">
           Anna & Adam
         </h1>
@@ -120,9 +116,9 @@
   </div>
 </template>
 
-<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
 <script>
 import axios from 'axios'
+// import $ from "jquery";
 
 export default {
   data() {
@@ -135,26 +131,30 @@ export default {
   },
   methods: {
     collectData() {
+      // let name = this.name
+      // let phone = this.phone
+      // let email = this.email
+      // let others = this.others
       // $.ajax({
-      //   type: "get",
-      //   url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycby0TBR-1gEfdvp1Xmo_wNbRP3wRW_qad7J1Pr6QxzMh2bwckcFDfbjAIogWh8gFziVr-w/exec",
+      //   //type: "get",
+      //   url: "https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwO3n5eXHSr_gBo17DSAfW5mtThfnoRYsMGhkHtnQmhn4gaJCAWTov3_2vas05TVhLzKQ/exec",
       //   data: {
-      //       "name": this.name,
-      //       "phone": this.phone,
-      //       "email": this.email,
-      //       "others": this.others,
+      //       "name": name,
+      //       "phone": phone,
+      //       "email": email,
+      //       "others": others,
       //   },
-      //   success: function(response) {
-      //     if(response == "success"){
-      //       alert("success");
-      //     } else {
-      //       alert("failed");
-      //     }
+      //   success: function() {
+      //     alert("success");
+      //   },
+      //   error: function() {
+      //     alert("failed");
       //   },
       // });
       //axios.defaults.crossDomain = true;
       axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-      axios.post('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbwO3n5eXHSr_gBo17DSAfW5mtThfnoRYsMGhkHtnQmhn4gaJCAWTov3_2vas05TVhLzKQ/exec', {
+      axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+      axios.post('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbzgSFB3HUKO9eSnROjtv-TWtfttmxqxsUmNcOTSnlBkGPBA17O6IAtsYrN4wm3okxdT/exec', {
         name: this.name,
         phone: this.phone,
         email: this.email,
