@@ -65,7 +65,7 @@
       <p class="mb-6 text-xl md:text-4xl">RSVP</p>
       <p class="mb-6 text-xl md:text-xl text-gray-400">Attend the wedding</p>
       <!-- <form @submit.prevent="collectData"> -->
-      <form action="https://script.google.com/macros/s/AKfycbyMDMBwSnHOUd50u1HfvqIV8AC-F9kTJL8zt91hEcfJf_n88YpKqqP3lrN8oEX-YY1Ltg/exec" method="get">
+      <form action="https://script.google.com/macros/s/AKfycbyAOzMapMYgjRwukrBzcdzcaQ-AzkKiNLrWzvtbMZoPUhcSQFcY_2eCnavDff2JE6Xf9A/exec" method="get">
         <div class="flex items-center mb-5">
           <label for="name" class="inline-block w-20 mr-6 text-right
                                   font-bold text-gray-600">*Name</label>
