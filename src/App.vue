@@ -1,20 +1,10 @@
 <template>
   <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <Wedding />
+    <!-- <Wedding /> -->
+    <router-link to="/"></router-link>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import Wedding from './components/Wedding.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Wedding
-  }
-}
-</script>
 
 <style>
 #app {

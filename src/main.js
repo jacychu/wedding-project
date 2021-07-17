@@ -4,6 +4,7 @@ import './assets/css/tailwind.css'
 import VueScrollTo from 'vue-scrollto'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import router from './router'
 
 Vue.config.productionTip = false;
 Vue.use(VueScrollTo, {
@@ -14,5 +15,7 @@ new Vue({
   created () {
     AOS.init()
   },
-  render: h => h(App),
+
+  router,
+  render: h => h(App)
 }).$mount('#app')

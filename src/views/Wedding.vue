@@ -25,10 +25,11 @@
     </div>
     <span><img src="../assets/brideandgroom.jpg" class="w-3/5 mx-auto"></span>
     <div data-aos="fade-up" class="leading-normal mx-auto py-12 px-4 max-w-lg">
-      <p class="mb-4 text-lg">Quae commodi reiciendis maxime fuga, recusandae obcaecati officia cum temporibus dicta quibusdam praesentium, magni, cumque aperiam iusto sequi illum molestiae non.</p>
-      <p class="mb-4 text-lg">In excepturi repeuidem deleniti libero officia dicta vel asperiores velit molestiae blanditiis, dolore voluptatibus excepturi laudantium at veniam illo. Dolor!</p>
-      <p class="mb-4 text-lg">Neque laudantium ctus optio consequuntur voluptatem sapiente odit dolorum minima harum tenetur, dolor provident reprehenderit. Ex eum provident harum?</p>
-      <p class="mb-4 text-lg">Mollitia temporibvoluptate magni aspernatur aperiam. Eius voluptates rem eum, facilis inventore hic provident pariatur nam non! At odit iste cum.</p>
+      <p class="mb-4 text-lg">It was love at first sound. She called my apartment in a huff at 1:00 a.m.,
+        looking to tell off my roommate, whom she had just started dating.
+        My roommate wasn’t home, and I happened to be standing by the phone,
+        so she vented to me, the faceless stranger. We ended up talking for two hours,
+        learning a lot about each other, and falling in love.</p>
     </div>
 
     <div class="bg-quote flex items-center justify-center h-96 mx-auto">
@@ -63,21 +64,21 @@
     <div data-aos="fade-up" id="element" class="leading-normal mx-auto py-12 px-4 max-w-lg">
       <p class="mb-6 text-xl md:text-4xl">RSVP</p>
       <p class="mb-6 text-xl md:text-xl text-gray-400">Attend the wedding</p>
-      <form @submit.prevent="collectData">
-      <!--<form action="https://script.google.com/macros/s/AKfycbwO3n5eXHSr_gBo17DSAfW5mtThfnoRYsMGhkHtnQmhn4gaJCAWTov3_2vas05TVhLzKQ/exec" method="get">-->
+      <!-- <form @submit.prevent="collectData"> -->
+      <form action="https://script.google.com/macros/s/AKfycbyMDMBwSnHOUd50u1HfvqIV8AC-F9kTJL8zt91hEcfJf_n88YpKqqP3lrN8oEX-YY1Ltg/exec" method="get">
         <div class="flex items-center mb-5">
           <label for="name" class="inline-block w-20 mr-6 text-right
                                   font-bold text-gray-600">*Name</label>
-          <input type="text" id="name" name="name" v-model="name"
+          <input type="text" id="name" name="name" v-model="name" required
                 class="flex-1 py-2 border-b-2 border-gray-400
                         text-gray-600
                         placeholder-gray-400
                         outline-none">
         </div>
-        <div class="flex items-center mb-10">
+        <div class="flex items-center mb-10 this-form">
           <label for="email" class="inline-block w-20 mr-6 text-right
                                       font-bold text-gray-600">*Email</label>
-          <input type="text" id="email" name="email" v-model="email"
+          <input type="text" id="email" name="email" v-model="email" required
                 class="flex-1 py-2 border-b-2 border-gray-400
                         text-gray-600
                         placeholder-gray-400
@@ -86,7 +87,7 @@
         <div class="flex items-center mb-10">
           <label for="phone" class="inline-block w-20 mr-6 text-right
                                       font-bold text-gray-600">*Phone</label>
-          <input type="text" id="phone" name="phone" v-model="phone"
+          <input type="text" id="phone" name="phone" v-model="phone" required
                 class="flex-1 py-2 border-b-2 border-gray-400
                         text-gray-600
                         placeholder-gray-400
@@ -190,5 +191,19 @@ export default {
 
 .info-olive {
   color: #85915E;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: none;
+  -webkit-box-shadow: none;
+  transition: background-color 5000s ease-in-out 0s;
 }
 </style>
